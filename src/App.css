@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+header {
+  padding: 22px max(24px, calc((100vw - 1120px) / 2));
+  color: #fff;
+  background: #284f3b;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.logo {
+  margin-left: 8px;
+}
+
+main {
+  width: min(1120px, calc(100% - 48px));
+  margin: 32px auto;
+}
+
+.new-plant-form {
+  padding: 20px 0 24px;
+  border-bottom: 1px solid #d5ddd3;
+}
+
+.new-plant-form h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+}
+
+.new-plant-form form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  gap: 10px;
+}
+
+input {
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid #b8c5b8;
+  border-radius: 4px;
+  background: #fff;
+}
+
+button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  background: #477a53;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #365f40;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0 18px;
+}
+
+.searchbar input {
+  width: min(360px, 100%);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid #d9e0d7;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #e8eee5;
+}
+
+.card-content {
+  padding: 14px;
+}
+
+.card h4 {
+  margin: 0 0 7px;
+  font-size: 17px;
+}
+
+.card p {
+  margin: 0 0 12px;
+}
+
+.card button:not(.primary) {
+  background: #72786f;
+}
+
+.error-message {
+  margin: 12px 0;
+  color: #9b3028;
+}
+
+@media (max-width: 680px) {
+  main {
+    width: calc(100% - 32px);
+    margin: 20px auto;
+  }
+
+  .new-plant-form form {
+    grid-template-columns: 1fr;
+  }
+
+  .searchbar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .searchbar input {
+    width: 100%;
+  }
+}
